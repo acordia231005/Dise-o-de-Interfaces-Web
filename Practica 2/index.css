@@ -1,17 +1,18 @@
 body {
       margin: 0;
       padding: 0;
-      color:#191970 ;
       min-height: 100vh;
     }
-header{
-    background-color: #0B132B;
-}
+
 h1, h2, h3{
     font-family: Playfair Display, serif;
+    text-align: center;
+    margin-bottom: 10px;
 }
-p, descriptions{
-    font-family: lora;
+p, .descriptions{
+    font-family: lora, serif;
+    text-align: justify;
+    margin-bottom: 10px;
 }
 .navbar {
       display: flex;
@@ -20,6 +21,7 @@ p, descriptions{
       padding: 15px 40px;
       border: 1px solid #ddd;
       background: #fff;
+      color:#191970 ;
     }
 
     .navbar .logo {
@@ -76,18 +78,62 @@ p, descriptions{
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 300px;
+      height: 650px;
       background-color: #e0e0e0; 
+        color:#191970 ;
     }
 
 main {
     flex: 1;                
 }
+.container-central {
+    max-width: auto;
+    margin-left: 60px ;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+    text-align: center;
+}
+.container {
+            display: flex;
+            align-items: flex-start;
+            background: #f5f5f5;
+            padding: 16px;
+        }
+        .image-placeholder {
+            background: #cccccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 24px;
+        }
+      
+        .text-content {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #333;
+            line-height: 1.4;
+        }
+  .container-right {
+            display: flex;
+            align-items: right;
+            background: #f5f5f5;
+            padding: 15px;
+            flex-direction: row-reverse;
+        }
+        .image-placeholder-right {
+            background: #cccccc;
+            display: flex;
+            align-items: right;
+            justify-content: center;
+            margin-left: 24px;
+        }
+
+
 footer {
   background: #0B132B;
   color: #F8F4E3;
   padding: 30px 0 10px 0;
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -110,14 +156,14 @@ footer {
 
 .footer-nav a {
   margin: 0 12px;
-  color: #444;
+  color: #F4D58D;
   text-decoration: none;
   font-size: 15px;
 }
 
 .footer-social a {
   margin-left: 15px;
-  color: #444;
+  color: #F4D58D;
   font-size: 17px;
   text-decoration: none;
 }
@@ -133,4 +179,10 @@ footer {
   margin-left: 30px;
   color: #bbb;
   text-decoration: none;
+}
+
+.twitter-icon {
+  font-size: 24px;
+  color: #1DA1F2;
+  margin-left: 15px;
 }
