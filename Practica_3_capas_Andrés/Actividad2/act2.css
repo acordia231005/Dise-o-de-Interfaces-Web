@@ -1,0 +1,117 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height:100%; font-family: Arial, Helvetica, sans-serif; background:#f3f3f3; color:#111; }
+
+
+.wrapper {
+  width: 96%;
+  max-width: 1100px; /* tamaño cómodo */
+  margin: 16px auto;
+  border: 3px solid #222;
+  background: #fff;
+}
+
+.row {
+  display:flex;
+  flex-wrap:nowrap;
+  border-bottom:2px solid #222;
+}
+
+/* celda genérica: solo para visualizar cajas como en el esquema */
+.cell {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height: 1px;
+  padding: 10px;
+  font-weight:700;
+  text-align:center;
+  border-left:2px solid #222;
+}
+
+/* quitar borde izquierdo en primer hijo de cada row */
+.row > .cell:first-child { border-left:0; }
+
+/* HEADER: tres columnas porcentuales (20% - 60% - 20%) */
+.header { height:90px; align-items:stretch; }
+.header .menu   { width:20%; justify-content:flex-start; position:relative; padding-left:18px; }
+.header .logo   { width:60%; justify-content:center; }
+.header .socials{ width:20%; justify-content:flex-end; padding-right:18px; }
+
+/* Menu hamburguesa */
+.nav-toggle { display:none; }
+.hamburger { cursor:pointer; display:inline-flex; align-items:center; gap:6px; padding:8px; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 600; font-size:28px; }
+
+/* nav desplegable (oculto por defecto) */
+.nav {
+  position:absolute;
+  top:62px;
+  left:10px;
+  background:#fff;
+  border:1px solid #ccc;
+  display:none;
+  min-width:200px;
+  z-index:40;
+}
+.nav ul { list-style:none; }
+.nav li { border-bottom:1px solid #eee; }
+.nav a { display:block; padding:8px 12px; text-decoration:none; color:#222; }
+.nav a:hover { background:#f0f0f0; }
+
+/* checkbox hack para mostrar nav */
+.nav-toggle:checked ~ .nav { display:block; }
+
+/* logo */
+.header .logo img { max-height:68px; width:auto; }
+
+/* socials */
+.socials .social { margin-left:10px; display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; text-decoration:none; color:inherit; }
+.socials svg { fill:#111; opacity:0.9; }
+
+/* HERO: imagen ancho completo */
+.hero { height:auto; }
+.hero-cell { width:100%; padding:0; }
+.hero-cell img { width:100%; height:auto; display:block; }
+
+/* TWO COLS (50% / 50%) */
+.two-cols { height:auto; }
+.two-cols .half { width:50%; padding:18px; align-items:flex-start; border-left:2px solid #222; }
+.two-cols .figure { width:100%; text-align:center; font-weight:700; }
+.two-cols img { width:100%; height:auto; display:block; border-radius:6px; }
+
+/* THREE COLS: lateral 20% - central 60% - lateral 20% (más parecida al esquema) */
+.three-cols { align-items:stretch; }
+.side-left  { width:20%; min-height:220px; background:#fafafa; }
+.center-text { width:60%; padding:28px; display:flex; align-items:center; justify-content:center; }
+.side-right { width:20%; min-height:220px; background:#fafafa; }
+
+/* contenido texto centrado con max-width 1200px */
+.text-wrap { width:92%; max-width:1200px; text-align:left; font-weight:400; color:#222; }
+.text-wrap h2 { font-weight:700; margin-bottom:10px; }
+.text-wrap p { margin-bottom:12px; line-height:1.6; }
+
+/* FOOTER 4 columnas (cada una 25%) */
+.footer-4 { background:#222; color:#fff; align-items:flex-start; }
+.footer-4 .q { width:25%; padding:18px; align-items:flex-start; border-left:2px solid rgba(255,255,255,0.08); text-align:left; font-weight:700; }
+.footer-4 h4 { margin-bottom:8px; }
+.footer-4 ul { list-style:none; padding-left:0; margin:0; font-weight:400; }
+.footer-4 li { margin-bottom:8px; }
+.footer-4 a { color:#ddd; text-decoration:none; }
+.footer-4 a:hover { color:#fff; text-decoration:underline; }
+
+/* FIRMA final */
+.signature { height:60px; background:#111; color:#fff; }
+.sign-cell { width:100%; font-weight:700; }
+
+/* estilos responsive: en pantallas pequeñas apilar verticalmente */
+@media (max-width:900px) {
+  .row { flex-wrap:wrap; }
+  .header .menu, .header .logo, .header .socials { width:100%; }
+  .two-cols .half, .three-cols .side-left, .three-cols .center-text, .three-cols .side-right, .footer-4 .q {
+    width:100%; border-left:0; border-top:2px solid #222;
+  }
+  .nav { position:static; top:auto; left:auto; box-shadow:none; border:none; width:100%; display:none; }
+  .nav-toggle:checked ~ .nav { display:block; }
+  .center-text { padding:18px; }
+}
