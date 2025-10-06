@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+
+* {
+  margin: 0; 
+  padding: 0; 
+}
+
+html,body { 
+  background:#475E82; 
+  color:#c1cfe8; 
+}
+h1, h2, figcaption{
+  font-family: 'Pacifico';
+  font-size: 2em;
+}
+
+p, h4 {
+  font-family: 'Tinos', serif;
+}
+
+.row{
+    margin-top: 20px;
+     text-align: center;
+}
+
+.text-center{
+    width: 500px; 
+    font-size: small;
+}
+
+
+
+.figure-left img{
+    text-align: center;
+    width: 500px;
+}
+
+.figure-right img{
+    text-align: center;
+
+    width: 500px;
+}
+
+.container-footer{
+    background-color: black;
+    color:#c1cfe8 ;
+    text-align: center;
+    
+}
+
+.enlaces{
+    margin-left: 100px;
+}
+
+.copi{
+    text-align: center;
+    width: 100%;
+}
+
+.center{
+    width: 500px; 
+    font-size: small;
+}
+
+.imagen-grande img{
+    height: 700px;
+    width: 100%;
+}
